@@ -6,6 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        /* #second-title{
+            background-color: rgba(210, 105, 30, 0.418);
+        } */
+    </style>
 </head>
 
 <body>
@@ -21,20 +26,22 @@
                     sint, officia, qui accusantium.</p>
             </article>
             <article>
-                <h3>My Awesome Blog-2</h3>
+                <h3 id="second-title">My Awesome Blog-2</h3>
                 <p>Facere culpa quaerat minima quae nemo magni ex rerum amet laudantium nostrum totam voluptate
                     voluptatem a, voluptatibus natus delectus voluptatum deleniti expedita? Nulla id quos cupiditate
                     officiis fugiat nobis quas!</p>
             </article>
             <article>
-                <h3>My Awesome Blog-3</h3>
-                <p>Suscipit itaque, dolores, repellat change deserunt cum voluptates commodi error earum omnis quaerat in,
+                <h3 id="third-title">My Awesome Blog-3</h3>
+                <p>Suscipit itaque, dolores, repellat change deserunt cum voluptates commodi error earum omnis quaerat
+                    in,
                     ducimus neque et! Molestias harum obcaecati eos provident. Autem ex laboriosam corporis facere
                     incidunt eum ipsum quos?</p>
             </article>
             <article>
-                <h3>My Awesome Blog-4</h3>
-                <p>Suscipit itaque, dolores, repellat change 2 deserunt cum voluptates commodi error earum omnis quaerat in,
+                <h3 id="fourth-title">My Awesome Blog-4</h3>
+                <p>Suscipit itaque, dolores, repellat change 2 deserunt cum voluptates commodi error earum omnis quaerat
+                    in,
                     ducimus neque et! Molestias harum obcaecati eos provident. Autem ex laboriosam corporis facere
                     incidunt eum ipsum quos?</p>
             </article>
@@ -42,17 +49,28 @@
     </main>
 
     <script>
-        const student = { name: 'kissmot Ali', age: 16, height: 60 }
+        const student = { name: 'kissmot Ali', age: 16, height: 60 };
         // console.log(document.body)
-        const blogTitles = document.getElementsByTagName('h3')
+        const blogTitles = document.getElementsByTagName('h3');
         for (const h3 of blogTitles) {
-            console.log(h3.innerText);
+            // console.log(h3.innerText);
         }
 
-        const blogDetails = document.getElementsByTagName('p')
+        const blogDetails = document.getElementsByTagName('p');
         for (const p of blogDetails) {
-            console.log(p.innerText);
+            // console.log(p.innerText);
         }
+
+        const secondTitle = document.getElementById('second-title');
+        secondTitle.style.textAlign = 'center';
+
+        const third = document.getElementById('third-title');
+        third.innerText = 'Title updated by JS';
+        third.style.backgroundColor = 'salmon';
+        third.style.padding = '10px';
+        third.style.marginLeft = '20px'
+
+
 
     </script>
 </body>
